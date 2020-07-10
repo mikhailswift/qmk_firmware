@@ -8,21 +8,15 @@ enum tap_dances {
 void dance_brc_combo_fin(qk_tap_dance_state_t *state, void *user_data) {
   if (state->count == 1) {
     if (state->keycode == TD(TD_LBRC_COMBO)) {
-      register_code16(KC_LPRN);
+      register_code16(KC_LBRC);
     } else if (state->keycode == TD(TD_RBRC_COMBO)) {
-      register_code16(KC_RPRN);
+      register_code16(KC_RBRC);
     }
   } else if (state->count == 2) {
     if (state->keycode == TD(TD_LBRC_COMBO)) {
-      register_code16(KC_LCBR);
+      register_code16(KC_LPRN);
     } else if (state->keycode == TD(TD_RBRC_COMBO)) {
-      register_code16(KC_RCBR);
-    }
-  } else {
-    if (state->keycode == TD(TD_LBRC_COMBO)) {
-      register_code(KC_LBRC);
-    } else if (state->keycode == TD(TD_RBRC_COMBO)) {
-      register_code(KC_RBRC);
+      register_code16(KC_RPRN);
     }
   }
 }
@@ -30,21 +24,15 @@ void dance_brc_combo_fin(qk_tap_dance_state_t *state, void *user_data) {
 void dance_brc_combo_reset(qk_tap_dance_state_t *state, void *user_data) {
   if (state->count == 1) {
     if (state->keycode == TD(TD_LBRC_COMBO)) {
-      unregister_code16(KC_LPRN);
+      unregister_code16(KC_LBRC);
     } else if (state->keycode == TD(TD_RBRC_COMBO)) {
-      unregister_code16(KC_RPRN);
+      unregister_code16(KC_RBRC);
     }
   } else if (state->count == 2) {
     if (state->keycode == TD(TD_LBRC_COMBO)) {
-      unregister_code16(KC_LCBR);
+      unregister_code16(KC_LPRN);
     } else if (state->keycode == TD(TD_RBRC_COMBO)) {
-      unregister_code16(KC_RCBR);
-    }
-  } else if (state->count > 2) {
-    if (state->keycode == TD(TD_LBRC_COMBO)) {
-      unregister_code(KC_LBRC);
-    } else if (state->keycode == TD(TD_RBRC_COMBO)) {
-      unregister_code(KC_RBRC);
+      unregister_code16(KC_RPRN);
     }
   }
 }
