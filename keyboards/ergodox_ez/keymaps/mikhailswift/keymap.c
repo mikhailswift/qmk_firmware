@@ -13,8 +13,8 @@
 #define KC_CTL_BSPACE LCTL_T(KC_BSPACE)
 #define KC_ALT_TAB LALT_T(KC_TAB)
 #define KC_SFT_ENTER LSFT_T(KC_ENTER)
-#define KC_LBRC_COMBO TD(TD_LBRC_COMBO)
-#define KC_RBRC_COMBO TD(TD_RBRC_COMBO)
+#define KC_TDLBRC TD(TD_LBRC_COMBO)
+#define KC_TDRBRC TD(TD_RBRC_COMBO)
 #define KC_TGL_COLOR  TOGGLE_LAYER_COLOR
 
 #define RGBLIGHT_DEFAULT_COLOR  51, 170, 255
@@ -30,11 +30,10 @@ enum layers {
   COLEMAK,
 };
 
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [QWERTY] = LAYOUT_ergodox_pretty(
     KC_TRANSPARENT, KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_TRANSPARENT,
-    LALT(KC_TAB),   KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           KC_LBRC_COMBO,                                  KC_RBRC_COMBO,  KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_TRANSPARENT,
+    LALT(KC_TAB),   KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           KC_TDLBRC,                                      KC_TDRBRC,      KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_TRANSPARENT,
     LGUI_T(KC_ESC), KC_A,           KC_S,           KC_D,           KC_F,           KC_G,                                                                           KC_H,           KC_J,           KC_K,           KC_L,           KC_SCOLON,      KC_QUOTE,
     OSL(SYMBOLS),   KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,           KC_MINUS,                                       KC_EQUAL,       KC_N,           KC_M,           KC_COMMA,       KC_DOT,         KC_SLASH,       OSL(ADJUST),
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_F5,                                                                                                          KC_DEL,         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
@@ -74,8 +73,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [COLEMAK] = LAYOUT_ergodox_pretty(
     KC_TRANSPARENT, KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_TRANSPARENT,
-    LALT(KC_TAB),   KC_Q,           KC_W,           KC_F,           KC_P,           KC_B,           KC_LBRC_COMBO,                                  KC_RBRC_COMBO,  KC_J,           KC_L,           KC_U,           KC_Y,           KC_SCOLON,      KC_TRANSPARENT,
-    LGUI_T(KC_ESC), KC_A,           KC_R,           KC_S,           KC_T,           KC_G,                                                                           KC_K,           KC_N,           KC_E,           KC_I,           KC_O,           RGUI_T(KC_QUOTE),
+    LALT(KC_TAB),   KC_Q,           KC_W,           KC_F,           KC_P,           KC_B,           KC_TDLBRC,                                      KC_TDRBRC,      KC_J,           KC_L,           KC_U,           KC_Y,           KC_SCOLON,      KC_TRANSPARENT,
+    LGUI_T(KC_ESC), KC_A,           KC_R,           KC_S,           KC_T,           KC_G,                                                                           KC_K,           KC_N,           KC_E,           KC_I,           KC_O,           KC_TRANSPARENT,
     OSL(SYMBOLS),   KC_Z,           KC_X,           KC_C,           KC_D,           KC_V,           KC_MINUS,                                       KC_EQUAL,       KC_M,           KC_H,           KC_COMMA,       KC_DOT,         KC_SLASH,       OSL(ADJUST),
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_F5,                                                                                                          KC_DEL,         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                                     LCTL(KC_BSPACE),KC_SCROLLLOCK,  KC_PAUSE,       KC_PSCR,
