@@ -36,11 +36,11 @@ enum keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [QWERTY] = LAYOUT_ergodox_pretty(
     KC_TRANSPARENT, KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_TRANSPARENT,
-    LALT(KC_TAB),   KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           KC_TDLBRC,                                      KC_TDRBRC,      KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_TRANSPARENT,
+    LGUI(KC_TAB),   KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           KC_TDLBRC,                                      KC_TDRBRC,      KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_TRANSPARENT,
     LGUI_T(KC_ESC), KC_A,           KC_S,           KC_D,           KC_F,           KC_G,                                                                           KC_H,           KC_J,           KC_K,           KC_L,           KC_SCOLON,      KC_QUOTE,
     OSL(SYMBOLS),   KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,           KC_MINUS,                                       KC_EQUAL,       KC_N,           KC_M,           KC_COMMA,       KC_DOT,         KC_SLASH,       OSL(ADJUST),
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_F5,                                                                                                          KC_DEL,         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-                                                                                                  LCTL(KC_BSPACE),  KC_SCROLLLOCK,  KC_PAUSE,       KC_PSCR,
+                                                                                                    LCTL(KC_LALT),  KC_SCROLLLOCK,  KC_PAUSE,       KC_PSCR,
                                                                                                                     KC_HOME,        KC_PGUP,
                                                                                     KC_SFT_SPACE,   KC_CTL_BSPACE,  KC_END,         KC_PGDOWN,      KC_ALT_TAB, KC_SFT_ENTER 
   ),
